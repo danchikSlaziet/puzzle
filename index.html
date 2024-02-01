@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" href="./main.css">
+  <title>Puzzle</title>
+</head>
+<body>
+  <div class="first-page first-page_active">
+    <div class="first-page__content">
+      <img class="first-page__img" src="./image/puzzle.png" alt="">
+      <p class="first-page__title">
+        Рады видеть в
+      </p>
+      <p class="first-page__subtitle">
+        па33ломании
+      </p>
+      <p class="first-page__tooltip">
+        нажми, чтобы продолжить &#8593;
+      </p>
+    </div>
+  </div>
+  <div class="second-page">
+    <div class="second-page__block-blue">
+      <img class="second-page__img" src="./image/puzzle.png" alt="">
+      <p class="second-page__title">
+        Собирай пазлы и получай плюшки!
+      </p>
+      <p class="second-page__subtitle">
+        Думаю не стоит объяснять правила игры. Просто перетягивай пазлы на нужные места и собирай картинку целиком!
+      </p>
+    </div>
+    <div class="second-page__block-white">
+      <p class="second-page__choose-title">
+        4 коллекции!
+      </p>
+      <p class="second-page__choose-text">
+        В игре есть 4 набора карточек, в каждом наборе по 3 уровня.
+        За каждую пройденную коллекцию можешь смело писать в наш бот для получения уникального приза!
+      </p>
+    </div>
+    <div class="second-page__collections">
+      <p class="second-page__collections-text">
+        Выбери 1 из наборов и начинай играть
+      </p>
+      <div class="second-page__item">
+        <img class="second-page__item-img" src="./image/cosmo-1.jpg" alt="">
+        <p class="second-page__item-text">
+          космос
+        </p>
+      </div>
+      <div class="second-page__item">
+        <img class="second-page__item-img second-page__item-img_sur" src="./image/sur-1.jpg" alt="">
+        <p class="second-page__item-text">
+          сюрреализм
+        </p>
+      </div>
+      <div class="second-page__item">
+        <img class="second-page__item-img" src="./image/car-1.jpg" alt="">
+        <p class="second-page__item-text">
+          авто
+        </p>
+      </div>
+      <div class="second-page__item">
+        <img class="second-page__item-img" src="./image/puzzle-1.jpg" alt="">
+        <p class="second-page__item-text">
+          пазлы (неожиданно, да?)
+        </p>
+      </div>
+    </div>
+    <div class="second-page__button">
+      Играть
+    </div>
+  </div>
+  <div class="main-page">
+    <canvas id="canvas"></canvas>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
