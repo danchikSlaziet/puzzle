@@ -8,8 +8,8 @@ const secondPageItems = secondPage.querySelectorAll('.second-page__item');
 const secondPageButton = secondPage.querySelector('.second-page__button');
 
 const mainPage = document.querySelector('.main-page');
+const mainPageNext = document.querySelector('.main-page__next');
 
-let puzzlePhoto;
 
 // код переключения меж страничками
 setTimeout(() => {
@@ -28,8 +28,18 @@ secondPageItems.forEach((elem, index) => {
     secondPageItems.forEach(elem => elem.classList.remove('second-page__item_active'))
     secondPageButton.classList.add('second-page__button_active');
     elem.classList.add('second-page__item_active');
-    puzzlePhoto = elem.querySelector('img');
-    img.src = puzzlePhoto.src;
+    if (elem.className.includes('1')) {
+      img.src = './image/cosmo-1.jpg';
+    }
+    else if (elem.className.includes('2')) {
+      img.src = './image/sur-1.jpg';
+    }
+    else if (elem.className.includes('3')) {
+      img.src = './image/car-1.jpg';
+    }
+    else if (elem.className.includes('4')) {
+      img.src = './image/car-1.jpg';
+    }
   });
 });
 
@@ -82,7 +92,7 @@ function initPuzzle() {
     puzzleWidth,
     puzzleHeight
   );
-  createTitle("Click to Start Puzzle");
+  // createTitle("Click to Start Puzzle");
   buildPieces();
 }
 
@@ -288,6 +298,7 @@ function gameOver() {
   document.onpointermove = null;
   document.onpointerup = null;
   initPuzzle();
+  mainPageNext.classList.add('main-page__next_active');
 }
 
 function pieceDropped(e) {
@@ -327,7 +338,7 @@ function resetPuzzleAndCheckWin() {
     }
   }
   if (gameWin) {
-    setTimeout(gameOver, 500);
+    setTimeout(gameOver, 300);
   }
 }
 
