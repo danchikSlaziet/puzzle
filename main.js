@@ -9,6 +9,8 @@ const secondPageButton = secondPage.querySelector('.second-page__button');
 
 const mainPage = document.querySelector('.main-page');
 
+let puzzlePhoto;
+
 // код переключения меж страничками
 setTimeout(() => {
   if (firstPage.className.includes('active')) {
@@ -26,6 +28,8 @@ secondPageItems.forEach((elem, index) => {
     secondPageItems.forEach(elem => elem.classList.remove('second-page__item_active'))
     secondPageButton.classList.add('second-page__button_active');
     elem.classList.add('second-page__item_active');
+    puzzlePhoto = elem.querySelector('img');
+    img.src = puzzlePhoto.src;
   });
 });
 
@@ -56,7 +60,6 @@ let currentPiece;
 let currentDropPiece;
 let mouse;
 img.addEventListener("load", onImage, false);
-img.src = "./image/puzzle-1.jpg";
 img.width = 350;
 img.height = 500;
 
